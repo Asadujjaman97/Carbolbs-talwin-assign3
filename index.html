@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carbolabs Corporation</title>
-  <link rel="shortcut icon" href="./carbolabsImage/CARBOLABS CORPORATION logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./carbolabsImage/CARBOLABS CORPORATION logo.png" type="image/x-icon" />
 
   <!-- Tailwind + DaisyUI -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,20 +12,41 @@
 </head>
 <body class="bg-white">
 <header>
-  <!-- Navbar -->
-  <div class="navbar bg-base-100 shadow-sm px-6 py-4">
+  <!-- ✅ Navbar -->
+  <div class="navbar bg-base-100 shadow-sm px-4 md:px-6 py-3 md:py-4">
     
     <!-- LEFT: Logo + Name -->
-    <div class="flex items-center gap-3 flex-1">
+    <div class="flex-1 flex items-center gap-2 md:gap-3">
       <img src="./carbolabsImage/CARBOLABS CORPORATION logo.png" 
            alt="Carbolabs Logo"
-           class="h-10 w-auto object-contain">
-      <a class="text-2xl font-bold">Carbolabs <span class="text-green-500">Corporation</span></a>
+           class="h-8 md:h-10 w-auto object-contain" />
+      <a class="text-xl md:text-2xl font-bold">
+        Carbolabs <span class="text-green-500">Corporation</span>
+      </a>
     </div>
 
-    <!-- CENTER: Menu -->
+    <!-- ✅ CENTER + MOBILE MENU TOGGLER -->
     <div class="flex-none">
-      <ul class="menu menu-horizontal px-1 font-medium">
+      <div class="dropdown dropdown-end md:hidden">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a class="text-blue-500 font-semibold">Home</a></li>
+          <li><a class="text-blue-500 font-semibold">About</a></li>
+          <li><a class="text-blue-500 font-semibold">Services</a></li>
+          <li><a class="text-blue-500 font-semibold">Product</a></li>
+          <li><a class="text-blue-500 font-semibold">Gallery</a></li>
+          <li><a class="text-blue-500 font-semibold">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- ✅ DESKTOP MENU -->
+      <ul class="menu menu-horizontal px-1 font-medium hidden md:flex">
         <li><a class="text-blue-500 font-semibold">Home</a></li>
         <li><a class="text-blue-500 font-semibold">About</a></li>
         <li><a class="text-blue-500 font-semibold">Services</a></li>
@@ -36,7 +57,7 @@
     </div>
 
     <!-- RIGHT: Search + Button -->
-    <div class="flex items-center gap-3 flex-1 justify-end">
+    <div class="hidden md:flex items-center gap-3 justify-end flex-1">
       <button class="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
              viewBox="0 0 24 24" stroke="currentColor">
@@ -45,68 +66,71 @@
         </svg>
       </button>
 
-      <a href="#" class="btn bg-green-500 text-white border-none hover:bg-green-600 px-5">
+      <a href="#" class="btn bg-green-500 text-white border-none hover:bg-green-600 px-4 md:px-5">
         Get Quote
       </a>
     </div>
-
   </div>
 </header>
+
 <main>
-<!-- Carousel Section -->
-<section class="w-full mt-8">
-  <div class="carousel w-full rounded-xl shadow-lg overflow-hidden">
+  <!-- ✅ Carousel Section -->
+  <section class="w-full mt-6 md:mt-8">
+    <div class="carousel w-full rounded-xl shadow-lg overflow-hidden">
+      
+      <!-- Slide 1 -->
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="./carbolabsImage/other reletive photo/Big file /1546413148.jpg" 
+             class="w-full h-[250px] sm:h-[350px] md:h-[500px] object-cover object-center" alt="Slide 1" />
+
+        <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 bg-black/60 text-white p-4 md:p-6 rounded-xl text-center max-w-lg w-[90%]">
+          <h2 class="text-lg md:text-2xl font-bold mb-2">Meet all the heroes from the field</h2>
+          <p class="text-sm opacity-90">Get smart connections. Condimentum adipiscing aliquam turpis placerat dolor.</p>
+        </div>
+
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:left-5 md:right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❮</a>
+          <a href="#slide2" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❯</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="./carbolabsImage/other reletive photo/Big file /1546413180.jpg" 
+             class="w-full h-[250px] sm:h-[350px] md:h-[500px] object-cover object-center" alt="Slide 2" />
+
+        <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 bg-black/60 text-white p-4 md:p-6 rounded-xl text-center max-w-lg w-[90%]">
+          <h2 class="text-lg md:text-2xl font-bold mb-2">Innovation in Every Drop</h2>
+          <p class="text-sm opacity-90">We deliver advanced chemical solutions for industrial excellence.</p>
+        </div>
+
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:left-5 md:right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❮</a>
+          <a href="#slide3" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❯</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="./carbolabsImage/other reletive photo/Big file /1546413350.jpg" 
+             class="w-full h-[250px] sm:h-[350px] md:h-[500px] object-cover object-center" alt="Slide 3" />
+
+        <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 bg-black/60 text-white p-4 md:p-6 rounded-xl text-center max-w-lg w-[90%]">
+          <h2 class="text-lg md:text-2xl font-bold mb-2">Quality You Can Trust</h2>
+          <p class="text-sm opacity-90">Driven by technology and trusted by industries worldwide.</p>
+        </div>
+
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-3 right-3 md:left-5 md:right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❮</a>
+          <a href="#slide1" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❯</a>
+        </div>
+      </div>
+
+    </div>
     
-    <!-- Slide 1 -->
-    <div id="slide1" class="carousel-item relative w-full">
-      <img src="./carbolabsImage/other reletive photo/Big file /1546413148.jpg" 
-           class="w-full h-[500px] object-cover object-center" alt="Slide 1" />
-
-      <!-- Center-bottom text box -->
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/60 text-white p-6 rounded-xl text-center max-w-lg w-[90%]">
-        <h2 class="text-2xl font-bold mb-2">Meet all the heroes from the field</h2>
-        <p class="text-sm opacity-90">Get smart connections. Condimentum adipiscing aliquam turpis placerat dolor.</p>
-      </div>
-
-      <!-- Navigation -->
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide4" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❮</a>
-        <a href="#slide2" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❯</a>
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div id="slide2" class="carousel-item relative w-full">
-      <img src="./carbolabsImage/other reletive photo/Big file /1546413180.jpg" 
-           class="w-full h-[500px] object-cover object-center" alt="Slide 2" />
-
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/60 text-white p-6 rounded-xl text-center max-w-lg w-[90%]">
-        <h2 class="text-2xl font-bold mb-2">Innovation in Every Drop</h2>
-        <p class="text-sm opacity-90">We deliver advanced chemical solutions for industrial excellence.</p>
-      </div>
-
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide1" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❮</a>
-        <a href="#slide3" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❯</a>
-      </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div id="slide3" class="carousel-item relative w-full">
-      <img src="./carbolabsImage/other reletive photo/Big file /1546413350.jpg" 
-           class="w-full h-[500px] object-cover object-center" alt="Slide 3" />
-
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/60 text-white p-6 rounded-xl text-center max-w-lg w-[90%]">
-        <h2 class="text-2xl font-bold mb-2">Quality You Can Trust</h2>
-        <p class="text-sm opacity-90">Driven by technology and trusted by industries worldwide.</p>
-      </div>
-
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide2" class="btn btn-circle bg-black/60 text-white border-none hover:bg-black/80">❮</a>
-
+  </section>
 
 </main>
-
 
 </body>
 </html>
